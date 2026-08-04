@@ -1,15 +1,15 @@
 <p align="center">
-  <img src="assets/banner.png" alt="MetaGhost" width="100%">
+  <img src="assets/banner.png" alt="nobitameta" width="100%">
 </p>
 
-# 👻 MetaGhost v4.0 — Advanced Forensics & Anonymization Console
+# 👻 nobitameta v4.0 — Advanced Forensics & Anonymization Console
 
 ![banner](https://img.shields.io/badge/Made%20By-HackOps%20Academy-%23a855f7)
 ![Version](https://img.shields.io/badge/Version-4.0-38bdf8)
 ![GUI](https://img.shields.io/badge/GUI-Electron%20%2B%20Flask-blue)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
-**MetaGhost** is a metadata forensics and privacy-scrubbing engine built by
+**nobitameta** is a metadata forensics and privacy-scrubbing engine built by
 **HackOps Academy**. v4.0 rebuilds it as a full desktop GUI application — the
 same engine, same offline-first philosophy, now with a proper HUD console
 instead of a bare terminal menu.
@@ -22,7 +22,7 @@ file-system dialogs around it.
 ---
 
 <p align="center">
-  <img src="assets/logo.png" alt="MetaGhost" width="200">
+  <img src="assets/logo.png" alt="nobitameta" width="200">
 </p>
 
 ## ⚡ What's new in v4.0 (GUI Edition)
@@ -38,7 +38,7 @@ file-system dialogs around it.
   (analyze, GPS lookup, scrub, bulk scrub) is logged locally and browsable.
 - **Still 100% offline.** The Flask API only ever binds to `127.0.0.1`; no
   data leaves the device.
-- The original terminal tool, `MetaGhost.sh`, is kept as-is for headless /
+- The original terminal tool, `nobitameta.sh`, is kept as-is for headless /
   Termux / SSH use.
 
 ---
@@ -51,7 +51,7 @@ file-system dialogs around it.
 | **GPS Forensics** | Pulls exact capture coordinates (+ altitude, direction, timestamp, speed) and links straight to Google Maps. |
 | **Secure Scrub** | Strips all metadata from a file. Original is always backed up first, cleaned copy written separately. |
 | **Bulk Scrub** | Sanitizes every file in a folder in one pass, with a per-file pass/fail breakdown. |
-| **Reports** | Browse every HTML report MetaGhost has generated this install. |
+| **Reports** | Browse every HTML report nobitameta has generated this install. |
 | **History** | Local audit log of every operation run, with timestamps and risk outcomes. |
 
 ---
@@ -61,11 +61,11 @@ file-system dialogs around it.
 Requires Python 3.9+, Node.js/npm, and `exiftool`.
 
 ```bash
-git clone https://github.com/hackops-academy/MetaGhost
-cd MetaGhost
+git clone https://github.com/hackops-academy/nobitameta
+cd nobitameta
 
 ./setup.sh   # one-time: installs exiftool (if missing), Python venv, Electron deps
-./start.sh   # launches the API + opens the MetaGhost HUD window
+./start.sh   # launches the API + opens the nobitameta HUD window
 ```
 
 `start.sh` uses `tmux` to run the API server and the Electron HUD side by
@@ -90,14 +90,14 @@ cd hud && npm start
 
 ### Install as a desktop app (Kali / Debian-based)
 
-Prefer a proper Applications-menu entry and a `metaghost` terminal command
+Prefer a proper Applications-menu entry and a `nobitameta` terminal command
 over running it from the cloned repo each time? Use the installer instead
 of `setup.sh`/`start.sh`:
 
 ```bash
-./packaging/install.sh     # installs to ~/.local/share/metaghost, adds
-                            # a menu entry, an icon, and a `metaghost` command
-metaghost                  # launch it from anywhere
+./packaging/install.sh     # installs to ~/.local/share/nobitameta, adds
+                            # a menu entry, an icon, and a `nobitameta` command
+nobitameta                  # launch it from anywhere
 
 ./packaging/uninstall.sh   # removes everything the installer created
 ```
@@ -112,8 +112,8 @@ The original bash tool still works standalone — handy for Termux, headless
 boxes, or SSH sessions where a GUI isn't an option:
 
 ```bash
-chmod +x MetaGhost.sh
-./MetaGhost.sh
+chmod +x nobitameta.sh
+./nobitameta.sh
 ```
 
 See the in-app menu for Deep Analysis, GPS Forensics, Secure Scrub, and
@@ -124,8 +124,8 @@ Bulk Scrub — identical feature set to the GUI, terminal-only.
 ## 📂 Project Layout
 
 ```
-MetaGhost/
-├── MetaGhost.sh          # original terminal tool (kept, standalone)
+nobitameta/
+├── nobitameta.sh          # original terminal tool (kept, standalone)
 ├── server/
 │   ├── engine.py          # core forensics engine (exiftool, risk scoring, scrub)
 │   └── server.py          # local Flask API (127.0.0.1:8077)
@@ -138,8 +138,8 @@ MetaGhost/
 ├── packaging/              # desktop install/uninstall
 │   ├── install.sh
 │   ├── uninstall.sh
-│   ├── bin/metaghost        # installed launcher command
-│   └── metaghost.desktop    # menu entry template
+│   ├── bin/nobitameta        # installed launcher command
+│   └── nobitameta.desktop    # menu entry template
 ├── reports/                # generated HTML forensic reports
 ├── clean_output/           # scrubbed files land here
 ├── backups/                 # originals backed up here before scrubbing
@@ -166,5 +166,5 @@ this tool. Always ensure you have permission before analyzing files that
 do not belong to you.
 
 <p align="center">
-Made with ❤️ by HackOps Academy
+Made with by https://t.me/classlight
 </p>

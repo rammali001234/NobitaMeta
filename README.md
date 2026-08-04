@@ -4,18 +4,18 @@
 
 # 👻 nobitameta v4.0 — Advanced Forensics & Anonymization Console
 
-![banner](https://img.shields.io/badge/Made%20By-HackOps%20Academy-%23a855f7)
+![banner](https://img.shields.io/badge/Made%20By-NOBITA%20Academy-%23a855f7)
 ![Version](https://img.shields.io/badge/Version-4.0-38bdf8)
 ![GUI](https://img.shields.io/badge/GUI-Electron%20%2B%20Flask-blue)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
 **nobitameta** is a metadata forensics and privacy-scrubbing engine built by
-**HackOps Academy**. v4.0 rebuilds it as a full desktop GUI application — the
+**NOBITA Academy**. v4.0 rebuilds it as a full desktop GUI application — the
 same engine, same offline-first philosophy, now with a proper HUD console
 instead of a bare terminal menu.
 
-The architecture mirrors [Glacier](https://github.com/hackops-academy),
-HackOps Academy's flagship pentesting toolkit: a small local Flask API doing
+The architecture mirrors [Glacier](https://github.com/NOBITA-academy),
+NOBITA Academy's flagship pentesting toolkit: a small local Flask API doing
 the real work, and an Electron shell providing a native desktop window and
 file-system dialogs around it.
 
@@ -61,7 +61,7 @@ file-system dialogs around it.
 Requires Python 3.9+, Node.js/npm, and `exiftool`.
 
 ```bash
-git clone https://github.com/hackops-academy/nobitameta
+git clone https://github.com/rammali001234/nobitameta.git
 cd nobitameta
 
 ./setup.sh   # one-time: installs exiftool (if missing), Python venv, Electron deps
@@ -161,7 +161,7 @@ nobitameta/
 ## ⚠️ Disclaimer
 
 This tool is designed for educational purposes, digital forensics, and
-privacy protection. HackOps Academy is not responsible for any misuse of
+privacy protection. NOBITA Academy is not responsible for any misuse of
 this tool. Always ensure you have permission before analyzing files that
 do not belong to you.
 
